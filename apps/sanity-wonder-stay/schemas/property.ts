@@ -9,11 +9,6 @@ export default {
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'string',
-    },
-    {
       name: 'location',
       title: 'Location',
       type: 'geopoint',
@@ -41,6 +36,12 @@ export default {
       },
     },
     {
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [{type: 'propertyImage'}],
+    },
+    {
       name: 'pricePerNight',
       title: 'Price Per Night',
       type: 'number',
@@ -56,17 +57,6 @@ export default {
       type: 'number',
     },
     {
-      name: 'host',
-      title: 'Host',
-      type: 'host',
-    },
-    {
-      name: 'reviews',
-      title: 'Reviews',
-      type: 'array',
-      of: [{type: 'review'}],
-    },
-    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -80,5 +70,27 @@ export default {
       title: 'ID',
       type: 'number',
     },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
+    {
+      name: 'host',
+      title: 'host',
+      type: 'host',
+    },
+    {
+      name: 'reviews',
+      title: 'Reviews',
+      type: 'array',
+      of: [{type: 'review'}],
+    },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      pricePerNight: 'pricePerNight',
+    },
+  },
 }
