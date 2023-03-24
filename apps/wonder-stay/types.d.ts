@@ -1,6 +1,6 @@
 export interface Properties {
   _id: string;
-  _title: string;
+  title: string;
   description: string;
   bedrooms: number;
   beds: number;
@@ -9,6 +9,7 @@ export interface Properties {
   reviews: {
     _id: string;
     rating: string;
+    length: number;
   };
   host: {
     _id: string;
@@ -25,6 +26,9 @@ export interface Properties {
   location: {
     lat: number;
     long: number;
+  };
+  slug: {
+    current;
   };
   mainImage: {
     asset: {
