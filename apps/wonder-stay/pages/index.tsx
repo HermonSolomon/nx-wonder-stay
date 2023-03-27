@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import DashboardMap from '../components/DashboardMap/DashboardMap';
 import { sanityClient, urlFor } from '../sanity';
 import { Properties } from '../types';
 import { isMultiple } from '../utils';
@@ -62,6 +63,9 @@ export function Index({ properties }: Props) {
           </div>
         </div>
       )}
+      <div className="map">
+        <DashboardMap properties={properties} />
+      </div>
     </>
   );
 }
