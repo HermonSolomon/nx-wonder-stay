@@ -8,7 +8,7 @@ const DashboardMap = ({ properties }) => {
   });
 
   console.log(properties[0].location?.lat);
-  console.log(properties[0].location?.lat);
+  // console.log(properties[0].location?.lat);
   const containerStyle = {
     width: '100%',
     height: '100vh',
@@ -48,6 +48,7 @@ const DashboardMap = ({ properties }) => {
             lat: property?.location?.lat,
             lng: property?.location?.lng,
           }}
+          key={index}
           icon={{
             url: image,
             anchor: new google.maps.Point(5, 58),

@@ -1,4 +1,4 @@
-export interface Properties {
+export interface Property {
   _id: string;
   title: string;
   description: string;
@@ -10,6 +10,13 @@ export interface Properties {
     _id: string;
     rating: string;
     length: number;
+  };
+  images: {
+    id: string;
+    asset: {
+      url: string;
+    };
+    caption: string;
   };
   host: {
     _id: string;

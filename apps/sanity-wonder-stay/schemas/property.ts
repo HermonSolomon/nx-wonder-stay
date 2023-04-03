@@ -23,6 +23,7 @@ export default {
           {title: 'Flat', value: 'flat'},
           {title: 'Bed and Breakfast', value: 'bed-and-breakfast'},
           {title: 'Boutique Hotel', value: 'boutique-hotel'},
+          {title: 'Cabin', value: 'cabin'},
         ],
         layout: 'radio',
       },

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -9,7 +10,9 @@ const NavBar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             {/* <img className="h-8" src={logo} alt="Logo" /> */}
-            <span className="ml-2 font-bold">My App</span>
+            <Link className="ml-2 font-bold" href="/">
+              My App
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center">

@@ -7,7 +7,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NavBar />
-      <main className="app">
+      <main className="app flex flex-row">
         <Component {...pageProps} />
       </main>
     </>

@@ -4,3 +4,6 @@ export default {
   type: 'reference',
   to: [{type: 'person'}],
 }
+
+
+const fetchData = () => {}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import DashboardMap from '../components/DashboardMap/DashboardMap';
 import { sanityClient, urlFor } from '../sanity';
-import { Properties } from '../types';
+import { Property } from '../types';
 import { isMultiple } from '../utils';
 
 export const getServerSideProps = async () => {
@@ -24,7 +24,7 @@ export const getServerSideProps = async () => {
 };
 
 interface Props {
-  properties: Properties[];
+  properties: Property[];
 }
 export function Index({ properties }: Props) {
   console.log(properties);
@@ -32,7 +32,7 @@ export function Index({ properties }: Props) {
   return (
     <>
       {properties && (
-        <div className="main">
+        <div className="main w-1/2">
           <div className="feed-container">
             <h1 className="text-2xl text-center p-4">
               Places to stay near you
@@ -46,7 +46,7 @@ export function Index({ properties }: Props) {
                   <div key={property._id} className="mb-4 flex-grow">
                     <img
                       src={urlFor(property.mainImage).url()}
-                      className="h-full object-cover"
+                      className="h-full max-h-52 l object-cover rounded-md"
                     />
                     <p>
                       {property.reviews.length} review
@@ -63,7 +63,7 @@ export function Index({ properties }: Props) {
           </div>
         </div>
       )}
-      <div className="map">
+      <div className="map w-1/2">
         <DashboardMap properties={properties} />
       </div>
     </>
